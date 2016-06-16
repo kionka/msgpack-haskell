@@ -50,10 +50,10 @@ getInt =
     0xCD -> fromIntegral <$> getWord16be
     0xCE -> fromIntegral <$> getWord32be
     0xCF -> fromIntegral <$> getWord64be
-    0xD0 -> fromIntegral <$> getInt8
-    0xD1 -> fromIntegral <$> getInt16be
-    0xD2 -> fromIntegral <$> getInt32be
-    0xD3 -> fromIntegral <$> getInt64be
+    0xD0 -> fromIntegral <$> Data.Binary.Get.getInt8
+    0xD1 -> fromIntegral <$> Data.Binary.Get.getInt16be
+    0xD2 -> fromIntegral <$> Data.Binary.Get.getInt32be
+    0xD3 -> fromIntegral <$> Data.Binary.Get.getInt64be
     _    -> empty
 
 getFloat :: Get Float
